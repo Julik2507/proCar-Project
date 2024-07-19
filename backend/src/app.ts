@@ -1,9 +1,8 @@
-import { myName } from "./modules/testservice.js";
+import express from "express";
 
+const app = express()
+const port = 3000
 
-const words: string = "helkoerjokwektgkjlo"
-console.log(words);
-
-myName('Juliajswsssksksnsesdjnsdfjkmsdfkdsrjkksssssssjdfjosdfjkonwsdsdejnn')
-
-console.log(123);
+app.listen(port, () => {
+    console.log(`http://localhost:${port}`)
+})
