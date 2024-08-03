@@ -1,4 +1,4 @@
-import { serial, text, pgTable } from "drizzle-orm/pg-core";
+import { serial, text, pgTable, integer } from "drizzle-orm/pg-core";
 
 export const users = pgTable("users", {
   id: serial("id").primaryKey().notNull(),
@@ -8,6 +8,8 @@ export const users = pgTable("users", {
   role: text("role").default("User")
 });
 
-export const testiki = pgTable("testiki", {
-  name: text("name"),
+export const tokens = pgTable("tokens", {
+  id: serial("id").primaryKey(),
+  token: text("token"),
+  user_id: integer("user_id").references(() => users.id)
 });
