@@ -1,9 +1,18 @@
-import { myName } from "./modules/testservice.js";
+import express from "express";
+import authModule from "./modules/auth/auth_controller.js";
+import userModule from "./modules/user/user_controller.js";
+import { errorMiddleware } from "./modules/middleware/errorMiddleware.js";
+import 'dotenv/config'
 
+const app = express();
+const port = process.env.PORT;
 
-const words: string = "helkoerjokwektgkjlo"
-console.log(words);
+app.use(express.json());
+app.use("/auth", authModule);
+app.use("/user", userModule);
 
-myName('Juliajswsssksksnsesdjnsdfjkmsdfkdsrjkksssssssjdfjosdfjkonwsdsdejnn')
+app.use(errorMiddleware); // LAST
 
-console.log(123);
+app.listen(port, () => {
+    console.log(`http://localhost:${port}`)
+})
