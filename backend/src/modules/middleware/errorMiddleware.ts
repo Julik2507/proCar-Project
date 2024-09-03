@@ -1,4 +1,4 @@
-import { ApiError } from "../error/ApiError.js";
+import { ApiError } from "../errorHandler/ApiError.js";
 import * as v from "valibot";
 
 export function errorMiddleware(err:any, req:any, res:any, next:any) {

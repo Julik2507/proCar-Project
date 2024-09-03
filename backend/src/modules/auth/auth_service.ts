@@ -1,7 +1,7 @@
 import * as bcrypt from 'bcrypt';
 import { db } from "../../db/db.js";
 import { users, tokens } from "../../db/schema.js";
-import { ApiError } from "../error/ApiError.js";
+import { ApiError } from "../errorHandler/ApiError.js";
 import { LoginDTO, RegisterDTO } from "./dto/dto_request.js";
 import { eq } from "drizzle-orm";
 import jwt from 'jsonwebtoken';
