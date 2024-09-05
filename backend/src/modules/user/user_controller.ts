@@ -2,7 +2,8 @@ import express  from 'express';
 import * as v from 'valibot';
 import { ChangeEmailSchema } from './dto/request.js';
 import { changeEmail } from './user_service.js';
-import { roleMiddleware } from '../middleware/roleMiddleware.js';
+import { roleMiddleware } from '../middleware/userRoleMiddleware.js';
+import { adminRoleMiddleware } from '../middleware/adminRoleMiddleware.js';
 
 const router = express.Router();
 

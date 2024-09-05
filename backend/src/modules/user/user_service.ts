@@ -1,6 +1,6 @@
 import { db } from "../../db/db.js";
 import { users } from "../../db/schema.js";
-import { ApiError } from "../error/ApiError.js";
+import { ApiError } from "../errorHandler/ApiError.js";
 import { ChangeEmailDTO, JwtTokenDTO } from "./dto/request.js";
 import { eq } from "drizzle-orm";
 

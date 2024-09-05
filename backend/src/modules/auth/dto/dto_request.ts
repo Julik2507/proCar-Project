@@ -14,3 +14,18 @@ export const LoginSchema = v.object({
 })
 
 export type LoginDTO = v.InferInput<typeof LoginSchema>;
+
+export const JwtSchema = v.object({
+    id: v.number(),
+    name: v.string(),
+    role: v.string()
+})
+
+export type JwtDTO = v.InferInput<typeof JwtSchema>;
+
+const SaveTokenRequestSchema = v.object({
+    id: v.number(),
+    token: v.string()
+})
+
+export type SaveTokenRequestDTO = v.InferInput<typeof SaveTokenRequestSchema>;
