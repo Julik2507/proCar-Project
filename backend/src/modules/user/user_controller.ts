@@ -7,7 +7,7 @@ import { adminRoleMiddleware } from '../middleware/adminRoleMiddleware.js';
 
 const router = express.Router();
 
-router.put('/change-email', adminRoleMiddleware, async (req:any, res, next) => {
+router.put('/change-email', roleMiddleware, async (req:any, res, next) => {
     try {
         v.parse(ChangeEmailSchema, req.query);
         await changeEmail(req.user, req.query.email);
