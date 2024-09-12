@@ -1,0 +1,1 @@
+ALTER TABLE "email_links" ALTER COLUMN "user_id" SET NOT NULL;
