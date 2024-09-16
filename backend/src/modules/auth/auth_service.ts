@@ -22,15 +22,15 @@ export async function registerUser(dto: RegisterDTO): Promise<RegisterResponseDT
     
     const tokens = await createTokens(createdUser[0]);
 
-    const saveEmailLink = await db.insert(email_links).values({
-        link: dto.password,
-        user_id: createdUser[0].id
-    });
+    // const saveEmailLink = await db.insert(email_links).values({
+    //     link: dto.password,
+    //     user_id: createdUser[0].id
+    // });
     
-    const sendEmailtoAprrove = await sendLinkToEmail({
-        email: createdUser[0].email,
-        link: dto.password
-    })
+    // const sendEmailtoAprrove = await sendLinkToEmail({
+    //     email: createdUser[0].email,
+    //     link: dto.password
+    // })
         
     await saveToken({
         id: createdUser[0].id,
