@@ -17,6 +17,7 @@ export type LoginDTO = v.InferInput<typeof LoginSchema>;
 
 export const JwtSchema = v.object({
     id: v.number(),
+    email: v.string(),
     name: v.string(),
     role: v.string()
 })
