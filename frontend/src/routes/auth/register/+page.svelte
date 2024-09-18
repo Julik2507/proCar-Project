@@ -1,5 +1,5 @@
 <script>
-    import InnerWrapper from "../../../components/inner_wrapper.svelte";
+    import InnerWrapper from "../../../components/auth/inner_wrapper.svelte";
 </script>
 
 <div class="wrapper">
@@ -13,6 +13,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F39494;
+    background-color: #EEF1FB;
 }
 </style>

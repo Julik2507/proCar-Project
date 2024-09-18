@@ -3,6 +3,7 @@
     import InnerBody from "./Inner_body.svelte";
     import InnerFooter from "./Inner_footer.svelte";
 
+
     import {registerUser} from '$lib/axios'
 
     async function register(params) {

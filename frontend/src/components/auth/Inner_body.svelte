@@ -20,7 +20,7 @@
 <div class="inner_body">
     <input type="text" class="input_text" placeholder="Ваше имя" bind:value={name}>
     <input type="text" class="input_text" placeholder="Ваш E-mail" bind:value={email}>
-    <input type="text" class="input_text" placeholder="Ваш пароль" bind:value={password}>
+    <input type="password" class="input_text" placeholder="Ваш пароль" bind:value={password}>
     <input type="button" value="Зарегистрироваться" class="input_btn" on:click={sendData}>
 </div>
 
