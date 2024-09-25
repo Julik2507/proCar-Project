@@ -1,16 +1,15 @@
 <script>
-    import InnerWrapper from "../../../components/auth/register/inner_wrapper.svelte";
-	import Header from "../../../components/homepage/header.svelte";
+    import Header from "../../../components/homepage/header.svelte";
+    import InnerWrapperLogin from "../../../components/auth/login/Inner_wrapper_login.svelte";
+
 </script>
 
 <div class="container">
     <Header/>
     <div class="wrapper">
-        <InnerWrapper/>
+        <InnerWrapperLogin/>
     </div>
 </div>
-
-
 
 <style>
     .container {

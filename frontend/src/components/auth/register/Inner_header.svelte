@@ -1,6 +1,6 @@
 <div class="inner_header">
     <h1>Пройдите регистрацию</h1>
-    <p>Уже имеете аккаунт? <span class="inner_header__piece">Логиньтесь!</span></p>    
+    <p>Уже имеете аккаунт? <span class="inner_header__piece"><a href="/auth/login">Авторизируйтесь!</a></span></p>    
 </div>
 
 <style>
