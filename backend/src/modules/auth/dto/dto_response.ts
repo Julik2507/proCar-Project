@@ -5,7 +5,7 @@ const CreateTokensRequestSchema = v.object({
     refreshToken: v.string(),
 })
 
-export type CreateTokensRequestDTO= v.InferOutput<typeof CreateTokensRequestSchema>;
+export type CreateTokensResponseDTO= v.InferOutput<typeof CreateTokensRequestSchema>;
 
 const RegisterResponseSchema = v.object({
     accessToken: v.string(),

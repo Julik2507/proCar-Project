@@ -1,4 +1,4 @@
-<script>
+<script   script>
     let name;
     let email;
     let password;

@@ -1,4 +1,19 @@
-<script></script>
+<script>
+    import {apiLogoutUser} from "$lib/axios"
+    import { goto } from '$app/navigation';
+
+    export async function logoutUser() {
+        try {
+            await apiLogoutUser();
+            goto('/auth/login');
+        } catch(err) {
+            console.log(err);
+        }
+
+    }
+
+
+</script>
 
 <div class="header">
     <div class="header_info">
@@ -31,6 +46,10 @@
         <div>
             <a class="header_auth_links" href="/auth/login/">Sign-In |</a>                
             <a class="header_auth_links" href="/auth/register/">Sign-Up</a>
+        </div>
+
+        <div>
+            <input type="button" value="Log-out" on:click={logoutUser}>
         </div>
 
     </div>

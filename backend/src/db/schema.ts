@@ -20,3 +20,14 @@ export const email_links = pgTable("email_links", {
   isActive: boolean("isActive").default(false).notNull(),
   user_id: integer("user_id").references(() => users.id).notNull()
 })
+
+export const brands = pgTable("brands", {
+  id: serial("id").primaryKey(),
+  name: text("name")
+})
+
+export const models = pgTable("models", {
+  id: serial("id").primaryKey(),
+  name: text("name"),
+  brand_id: integer("brand_id").references(() => brands.id)
+})

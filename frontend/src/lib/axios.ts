@@ -32,3 +32,13 @@ export async function apiLoginUser(dto: any) {
         throw err;
     }
 }
+
+export async function apiLogoutUser() {
+    try {
+        await axios.delete(`${baseURL}/auth/logout`);
+        localStorage.removeItem("accessToken");         
+    } catch(err:any) {
+        throw err;
+    } //add token for request!
+
+}

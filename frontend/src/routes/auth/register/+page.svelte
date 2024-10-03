@@ -1,6 +1,21 @@
 <script>
     import InnerWrapper from "../../../components/auth/register/inner_wrapper.svelte";
 	import Header from "../../../components/homepage/header.svelte";
+
+    // import apiLogoutUser from "$lib/axios"
+    // import { goto } from '$app/navigation';
+
+    // export async function logoutUser() {
+    //     try {
+    //         console.log(2);
+            
+    //         await apiLogoutUser();
+    //         goto('/');
+    //     } catch(err) {
+    //         console.log(err);
+    //     }
+
+    // }
 </script>
 
 <div class="container">

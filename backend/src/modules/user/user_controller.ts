@@ -1,7 +1,7 @@
 import express  from 'express';
 import * as v from 'valibot';
 import { ChangeEmailSchema } from './dto/request.js';
-import { changeEmail } from './user_service.js';
+import { changeEmail, getUsers } from './user_service.js';
 import { roleMiddleware } from '../middleware/userRoleMiddleware.js';
 import { adminRoleMiddleware } from '../middleware/adminRoleMiddleware.js';
 
@@ -16,6 +16,15 @@ router.put('/change-email', roleMiddleware, async (req:any, res, next) => {
         next(err);
     }
 
+})
+
+router.get("/get-users", roleMiddleware, async (req, res, next) => {
+    try {
+        const result = await getUsers();
+        res.send(result);
+    } catch(err:any) {
+        next(err);
+    }
 })
 
 export default router;
