@@ -3,7 +3,7 @@
     import InnerBodyLogin from './Inner_body_login.svelte';
     import InnerFooterLogin from './Inner_footer_login.svelte';
 
-    import {apiLoginUser} from '$lib/axios';
+    import {apiLoginUser} from '$lib/api/apiAuth.ts';
     import { goto } from '$app/navigation';
 
     let tempMessage;
