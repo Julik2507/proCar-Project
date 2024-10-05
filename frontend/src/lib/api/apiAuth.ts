@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { registerResponseDTO } from './dto/authResponseDTO';
+import { registerResponseDTO } from '../dto/authResponseDTO';
 
 type User = {
     name: string,
