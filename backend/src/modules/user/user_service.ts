@@ -14,3 +14,7 @@ export async function changeEmail(dto: JwtTokenDTO, newEmail: string) {
     }
 
 }
+
+export async function getUsers() {
+    return await db.select().from(users);
+}

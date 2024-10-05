@@ -4,7 +4,7 @@ export async function roleMiddleware(req:any, res:any, next:any) {
     
     try {
         const token = req.headers.authorization.split(' ')[1];
-        req.user = jwt.verify(token, process.env.SECRET_KEY!); 
+        req.user = jwt.verify(token, process.env.SECRET_KEY_ACCESS!); 
 
         next();
 

@@ -57,6 +57,13 @@
       "when": 1725895433762,
       "tag": "0007_dizzy_bulldozer",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1727810493091,
+      "tag": "0008_fantastic_northstar",
+      "breakpoints": true
     }
   ]
 }
