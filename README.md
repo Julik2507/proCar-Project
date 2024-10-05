@@ -1,3 +1,11 @@
 =proCar=
 
-IN THE PROCESS...
+proCar company provides for users opportunity to buy different cars
+
+Stack:
+1) Frontend (Svelte)
+2) Backend (ExpressJS)
+3) Database (PostresSQL)
+
+Langugages: JavaScript, typescript
+
