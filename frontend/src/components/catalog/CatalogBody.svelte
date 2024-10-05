@@ -2,6 +2,22 @@
     import speedometr from "$lib/pictures/speedometr.svg";
     import petrol from "$lib/pictures/petrol.svg";
     import manual from "$lib/pictures/manual.svg";
+    import {apiGetBrand} from "$lib/api/apiCatalog.ts";
+
+    function getBrand(brand_id) {
+        return apiGetBrand(brand_id);
+    }
+   
+    const urlParams = new URLSearchParams(window.location.search);
+    let brand_id = urlParams.get('brand_id');
+
+    console.log(brand_id);
+
+    let arrWithElements = getBrand(brand_id);
+    // console.log(arrWithElements);
+    
+
+    
 </script>
 
 <div class="catalog_wrapper">
@@ -11,35 +27,41 @@
     </div>
 
     <div class="catalog_list">
-        <!-- <div class="catalog_list__header">
-            <p class="catalog_topic">Find your love!</p>
-        </div> -->
 
-        <div class="catalog_list__element">
-            <div class="element_top">
-                <img class="element_top__image" src="https://avatars.mds.yandex.net/get-autoru-vos/1966039/6f0bcb1b349b081e3958e977ea9ae9b8/456x342" alt="">
+    {#await arrWithElements}
+        Sysliki are loading this data...
+    {:then arrWithElements} 
+        {#each arrWithElements as el}
+            
+             <div class="catalog_list__element">
+                <div class="element_top">
+                    <img class="element_top__image" src="https://avatars.mds.yandex.net/get-autoru-vos/1966039/6f0bcb1b349b081e3958e977ea9ae9b8/456x342" alt="">
+                </div>
+
+                <div class="element_buttom__description">
+                    <div class="bottom_description__header">
+                        <h3>Model: {el.name}</h3>
+                        <p>Year: {el.year}</p>
+                    </div>
+
+                    <hr>
+
+                    <div class="bottom_description_body">
+                        <img src="{speedometr}" alt="">
+                        <img src="{petrol}" alt="">
+                        <img src="{manual}" alt="">       
+                    </div>
+
+                    <hr>
+
+                    <div class="bottom_description_end">
+                        <p>Price: 22000$</p>
+                    </div>
+                </div>
             </div>
-            <div class="element_buttom__description">
-                <div class="bottom_description__header">
-                    <h3>Georgeous car!</h3>
-                    <p>Year: 2016</p>
-                </div>
+        {/each}
+    {/await}
 
-                <hr>
-
-                <div class="bottom_description_body">
-                    <img src="{speedometr}" alt="">
-                    <img src="{petrol}" alt="">
-                    <img src="{manual}" alt="">       
-                </div>
-
-                <hr>
-
-                <div class="bottom_description_end">
-                    <p>Price: 22000$</p>
-                </div>
-            </div>
-        </div>
 
         <!-- <div class="catalog_list__element">
         </div>
