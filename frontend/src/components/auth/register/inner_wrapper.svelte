@@ -3,7 +3,7 @@
     import InnerBody from "./Inner_body.svelte";
     import InnerFooter from "./Inner_footer.svelte";
 
-    import {apiRegisterUser} from '$lib/axios';
+    import {apiRegisterUser} from '$lib/api/apiAuth.ts';
     import { goto } from '$app/navigation';
 
 
