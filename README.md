@@ -7,5 +7,5 @@ Stack:
 2) Backend (ExpressJS)
 3) Database (PostresSQL)
 
-Langugages: JavaScript, typescript
+Languages: JavaScript, typescript
 
