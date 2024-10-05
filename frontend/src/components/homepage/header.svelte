@@ -1,5 +1,5 @@
 <script>
-    import {apiLogoutUser} from "$lib/axios"
+    import {apiLogoutUser} from "$lib/api/apiAuth.ts"
     import { goto } from '$app/navigation';
 
     export async function logoutUser() {
@@ -49,7 +49,7 @@
         </div>
 
         <div>
-            <input type="button" value="Log-out" on:click={logoutUser}>
+            <!-- <input type="button" value="Log-out" on:click={logoutUser}> -->
         </div>
 
     </div>
