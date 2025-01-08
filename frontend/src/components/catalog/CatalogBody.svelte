@@ -23,7 +23,7 @@
 <div class="catalog_wrapper">
     <div class="left_bar">
         <p>filters will be soon!</p>
-        <p>ne sdelal diskretky(</p>
+        <p>ne sdelal diskretky</p>
     </div>
 
     <div class="catalog_list">
@@ -35,7 +35,7 @@
             
              <div class="catalog_list__element">
                 <div class="element_top">
-                    <img class="element_top__image" src="https://avatars.mds.yandex.net/get-autoru-vos/1966039/6f0bcb1b349b081e3958e977ea9ae9b8/456x342" alt="">
+                    <img class="element_top__image" src="http://localhost:3000/{el.img}" alt="">
                 </div>
 
                 <div class="element_buttom__description">
@@ -47,15 +47,27 @@
                     <hr>
 
                     <div class="bottom_description_body">
-                        <img src="{speedometr}" alt="">
-                        <img src="{petrol}" alt="">
-                        <img src="{manual}" alt="">       
+                        <div class="bottom_description_body-item">
+                            <img src="{speedometr}" alt="">
+                            <p>{el.mileage}</p>
+                        </div>
+
+                        <div class="bottom_description_body-item">
+                            <img src="{petrol}" alt="">
+                            <p>{el.fuel}</p>
+                        </div>
+
+                        <div class="bottom_description_body-item">
+                            <img src="{manual}" alt="">       
+                            <p>{el.gearbox}</p>
+                        </div>
+                        
                     </div>
 
                     <hr>
 
                     <div class="bottom_description_end">
-                        <p>Price: 22000$</p>
+                        <p>Price: {el.price}</p>
                     </div>
                 </div>
             </div>
@@ -76,6 +88,10 @@
 </div>
 
 <style>
+    p {
+        margin: 0px;
+    }
+
     .catalog_wrapper {
         display: flex;
         background-color: #EEF1FB;
@@ -143,7 +159,20 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .bottom_description_body-item {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .bottom_description_body-item img {
+        height: 20px;
+        width: 20px;
+    }
+
     .bottom_description_end {
+        margin-top: 20px;
         display: flex;
         justify-content: center;
         justify-items: center;

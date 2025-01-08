@@ -29,5 +29,11 @@ export const brands = pgTable("brands", {
 export const models = pgTable("models", {
   id: serial("id").primaryKey(),
   name: text("name"),
+  img: text("img"),
+  year: text("year"),
+  fuel: text("fuel"),
+  mileage: text("mileage"),
+  price: text("price"),
+  gearbox: text("gearbox"),
   brand_id: integer("brand_id").references(() => brands.id)
 })

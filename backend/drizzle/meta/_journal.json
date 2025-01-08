@@ -64,6 +64,20 @@
       "when": 1727810493091,
       "tag": "0008_fantastic_northstar",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1736278117687,
+      "tag": "0009_abandoned_typhoid_mary",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1736323455003,
+      "tag": "0010_cool_omega_sentinel",
+      "breakpoints": true
     }
   ]
 }
