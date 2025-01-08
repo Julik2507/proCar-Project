@@ -23,7 +23,6 @@
 <div class="catalog_wrapper">
     <div class="left_bar">
         <p>filters will be soon!</p>
-        <p>ne sdelal diskretky</p>
     </div>
 
     <div class="catalog_list">

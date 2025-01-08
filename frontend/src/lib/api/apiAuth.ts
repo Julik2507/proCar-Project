@@ -8,7 +8,7 @@ type User = {
 }
 
 //process.env doesnt work!
-const baseURL = "http://127.0.0.1:3000"
+const baseURL = "http://176.109.107.106:3000"
 
 export async function apiRegisterUser(dto: User): Promise<registerResponseDTO> {
     try {
