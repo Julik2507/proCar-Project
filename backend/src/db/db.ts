@@ -8,4 +8,14 @@ const pool = new pkg.Pool({
     connectionString: process.env.DATABASE
 });
 
+pool.on("connect", () => {
+    console.log("gooood");
+    
+})
+
+pool.on("error", (err) => {
+    console.log("err", err);
+    
+})
+
 export const db = drizzle(pool, { schema });

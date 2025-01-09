@@ -14,6 +14,7 @@ import path, { dirname } from 'path';
 
 const app = express();
 const port = process.env.PORT;
+// const hostname = "0.0.0.0";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -23,7 +24,7 @@ app.use(express.json());
 app.use(fileUpload({}));
 app.use(express.static(path.resolve(__dirname, "static")));
 app.use(cookieParser()); //для парсинга куки в req.cookie
-app.use(cors({origin: []}))
+app.use(cors())
 app.use("/auth", authModule);
 app.use("/user", userModule);
 app.use("/approve", emailController);
@@ -32,6 +33,6 @@ app.use("/models", modelsController);
 
 app.use(errorMiddleware); // LAST ERROR MIDDLEWARE
 
-app.listen(port, () => {
-    console.log(`http://0.0.0.0:${port}`)
+app.listen(3000, "0.0.0.0", () => {
+    console.log(`0.0.0.0:${port}`)
 })

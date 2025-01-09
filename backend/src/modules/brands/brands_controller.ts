@@ -23,4 +23,12 @@ router.get("/get-brand", async (req:any, res, next) => {
     }
 })
 
+router.get("/hello", async (req:any, res, next) => {
+    try {
+        res.status(200).send("hello world!");
+    } catch(err:any) {
+        next(err)
+    }
+})
+
 export default router;
